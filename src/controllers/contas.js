@@ -102,9 +102,64 @@ const excluirConta = (req, res) => {
     return res.status(200).send()
 }
 
+const saldo = (req, res) => {
+    const {numero_conta, senha} = req.query
+
+    if (!numero_conta || !senha) {return res.status(400).json({ mensagem: `Número da conta e senha são obrigatórios` })}
+
+    const conta = dadosBancarios.contas.find((item) => {
+        return item.numero === Number(numero_conta)
+    })
+
+    if(!conta) {return res.status(404).json({mensagem: `Conta bancária não encontada!`})}
+
+    if(senha !== conta.usuario.senha) {return res.status(400).json({mensagem: `Senha incorreta, operação não pode ser concluída`})}
+
+    return res.json({saldo: conta.saldo})
+}
+
+const extrato = (req, res) => {
+    const {numero_conta, senha} = req.query
+
+    if(!numero_conta) {return res.status(400).json({mensagem: `Numero da conta obrigatório`})}
+    if(!senha) {return res.status(400).json({mensagem: `Numero da senha obrigatório`})}
+
+    const conta = dadosBancarios.contas.find((item) => {
+        return item.numero === Number(numero_conta)
+    })
+
+    if(!conta) {
+        return res.status(404).json({mensagem: `Numero de conta não encontrado`})
+    }
+
+    if(senha !== conta.usuario.senha) {return res.status(400).json({mensagem: `Senha incorreta, operação não pode ser concluída`})}
+
+    const extratoConta = {
+        depositos: [],
+        saques: [],
+        transferenciasEnviadas: [],
+        transferenciasRecebidas: []
+    };
+
+    extratoConta.depositos = dadosBancarios.depositos
+        .filter((deposito) => deposito.numero_conta === numero_conta);
+
+    extratoConta.saques = dadosBancarios.saques
+        .filter((saque) => saque.numero_conta === numero_conta);
+
+    extratoConta.transferenciasEnviadas = dadosBancarios.transferencias
+        .filter((transferencia) => transferencia.numero_conta_origem === numero_conta);
+
+    extratoConta.transferenciasRecebidas = dadosBancarios.transferencias
+        .filter((transferencia) => transferencia.numero_conta_destino === numero_conta);
+
+    return res.json(extratoConta);
+}
 module.exports = {
     listarContas,
     criarConta,
     atualizarDadosUsuario,
-    excluirConta 
+    excluirConta, 
+    saldo,
+    extrato    
 }

@@ -4,8 +4,9 @@
 
 <ul>
   <li>Esta é uma RESTful API para um Banco Digital que permite simular a gestão de contas bancárias e transações relacionadas..</li>
-  <li>API assincrona com dados persistido em memória.</li>
- 
+  <li>API sincrona com dados persistido em memória.</li> 
+ <li>Utilização de conceitos avançados de branch e merge para um fluxo de trabalho eficiente de desenvolvimento, permitindo a criação de branches dedicadas para o desenvolvimento de novos recursos e correções de bugs.</li>
+ <li>Projeto acadêmico de conclusão de módulo do curso imersivo da Cubos Academy by Ifood.</li>
 </ul>
 
 <h2>🛠️ Tecnologias Utilizadas</h2>
@@ -14,6 +15,7 @@
   <li>Node.js</li>
   <li>NPM (Node Package Manager)</li>
   <li>Express</li>
+  <li>Git</li>
 </ul>
 
 <h2>🌟 Recursos</h2>
@@ -30,21 +32,6 @@
     <li>:white_check_mark: Emitir extrato bancário.</li>
 </ul>
 
-<h2>🛠 Rotas</h2>
-
-<ul>
-  <li>GET /contas</li>
-  <li>POST /contas</li>
-  <li>PUT /contas/:numeroConta/usuario</li>
-  <li>DELETE /contas/:numeroConta</li>
-  <li>GET /contas/saldo</li>
-  <li>GET /contas/extrato</li>
-  <li>POST /transacoes/depositar</li>
-  <li>POST /transacoes/sacar</li>
-  <li>POST /transacoes/transferir</li>
-
-</ul>
-
 <h2>📚 Habilidades Adquiridas</h2>
 
 <ul>
@@ -57,7 +44,31 @@
   <li>Boas Práticas de Código e Organização do Projeto.</li>
 </ul>
 
-<h2>Insomnia</h2>
+<h2>🛠 Rotas</h2>
+
+
+ <p>POST /contas<p>
+ <p align="center"><img src="src/assets/img/cadastrar.jpg"></p>
+  <p>GET /contas</p>
+ <p align="center"><img src="src/assets/img/listar.jpg"></p>
+  <p>PUT /contas/:numeroConta/usuario</p>
+ <p align="center"><img src="src/assets/img/atualizar.jpg"></p>
+  <p>DELETE /contas/:numeroConta</p>
+ <p align="center"><img src="src/assets/img/excluir.jpg"></p>
+  <p>GET /contas/saldo</p>
+ <p align="center"><img src="src/assets/img/saldo.jpg"></p>
+  <p>GET /contas/extrato</p>
+ <p align="center"><img src="src/assets/img/extrato.jpg"></p>
+  <p>POST /transacoes/depositar</p>
+ <p align="center"><img src="src/assets/img/depositar.jpg"></p>
+  <p>POST /transacoes/sacar</p>
+ <p align="center"><img src="src/assets/img/sacar.jpg"></p>
+  <p>POST /transacoes/transferir</p>
+  <p align="center"><img src="src/assets/img/transferir.jpg"></p>
+</ul>
+
+
+
 
 
 

@@ -2,12 +2,12 @@
 
 <h2>ℹ️ Sobre o Projeto</h2>
 
-<ul>
-  <li>Esta é uma RESTful API para um Banco Digital que permite simular a gestão de contas bancárias e transações relacionadas..</li>
-  <li>API sincrona com dados persistido em memória.</li> 
- <li>Utilização de conceitos avançados de branch e merge para um fluxo de trabalho eficiente de desenvolvimento, permitindo a criação de branches dedicadas para o desenvolvimento de novos recursos e correções de bugs.</li>
- <li>Projeto acadêmico de conclusão de módulo do curso imersivo da Cubos Academy by Ifood.</li>
-</ul>
+
+  <p>Esta é uma RESTful API para um Banco Digital que permite simular a gestão de contas bancárias e transações relacionadas..</p>
+  <p>API sincrona com dados persistido em memória.</p> 
+ <p>Utilização de conceitos avançados de branch e merge para um fluxo de trabalho eficiente de desenvolvimento, permitindo a criação de branches dedicadas para o desenvolvimento de novos recursos e correções de bugs.</p>
+ <p>Projeto acadêmico de conclusão de módulo do curso imersivo da Cubos Academy by Ifood.</p>
+
 
 <h2>🛠️ Tecnologias Utilizadas</h2>
 
